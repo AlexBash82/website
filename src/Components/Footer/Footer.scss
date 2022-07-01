@@ -155,3 +155,91 @@
     background-repeat: no-repeat;
   }
 }
+
+@media all and (max-width: 1400px) {
+  .Footer_box {
+    &_col-1 {
+      width: 471px;
+
+      &_text-1,
+      &_text-2 {
+        width: 415px;
+      }
+    }
+
+    &_form {
+      margin-left: 54px;
+    }
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .Footer {
+    height: 600px;
+    justify-content: start;
+
+    &_box {
+      width: 471px;
+      height: 461px;
+      flex-direction: column;
+      margin-top: 60px;
+      margin-left: 2.688vw;
+
+      &_form {
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 510px) {
+  .Footer {
+    height: 458px;
+
+    &_box {
+      width: 295px;
+      height: 378px;
+      margin-top: 38px;
+
+      &_col-1 {
+        width: 295px;
+        height: 134px;
+        gap: 10px;
+
+        &_img {
+          width: 80px;
+          height: 39px;
+          background-size: contain;
+        }
+
+        &_text-1 {
+          width: 220px;
+          height: 64px;
+          margin-left: 15px;
+          margin-top: 2px;
+          font-size: 24px;
+          line-height: 32px;
+        }
+
+        &_text-2 {
+          width: 280px;
+          height: 60px;
+          margin-left: 15px;
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+
+      &_form {
+        width: 280px;
+        margin-left: 15px;
+        margin-top: 20px;
+
+        &_container,
+        &_button {
+          width: 280px;
+        }
+      }
+    }
+  }
+}

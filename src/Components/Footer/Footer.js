@@ -7,7 +7,7 @@ function Footer() {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitSuccessful, isValid },
+    formState: { errors, isSubmitSuccessful },
   } = useForm({
     mode: 'onChange',
   })
