@@ -14,6 +14,7 @@ function Footer() {
 
   const onSubmit = (data) => {
     alert(JSON.stringify(data))
+    alert('I am here: Components/Footer/Footer.js 16:5')
   }
 
   return (
@@ -22,7 +23,8 @@ function Footer() {
         <div className="Footer_box_col-1">
           <div className="Footer_box_col-1_img"></div>
           <div className="Footer_box_col-1_text-1">
-            Псс, хочешь себе это приложение?
+            Псс, хочешь себе
+            <br /> это приложение?
           </div>
           <div className="Footer_box_col-1_text-2">
             У тебя свой клуб или больше, но нет ПО для клиентов и персонала,

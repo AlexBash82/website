@@ -56,12 +56,13 @@
       width: 320px;
       height: 60px;
 
-      &_num {
+      &_button {
         width: 60px;
         height: 60px;
         border: 1px solid #ffffff;
         border-radius: 20px;
         box-sizing: border-box;
+        background: rgba(255, 255, 255, 0);
 
         &:hover {
           background: rgba(255, 255, 255, 0.3);
@@ -69,27 +70,21 @@
 
         &:active {
           background: #ffffff;
+          & > span {
+            background: linear-gradient(103.55deg, #b487f5 0%, #6e8cf5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          }
         }
 
-        &_text {
-          text-align: center;
-          width: 60px;
-          height: 60px;
-          border-radius: 20px;
+        & > span {
           font-family: 'Gilroy';
           font-style: normal;
           font-weight: 700;
           font-size: 34px;
           line-height: 60px;
           color: #ffffff;
-
-          &:active {
-            background: linear-gradient(103.55deg, #b487f5 0%, #6e8cf5 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-fill-color: transparent;
-          }
         }
       }
     }
@@ -119,35 +114,19 @@
     &_button {
       width: 247px;
       height: 64px;
-
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      padding: 20px 32px;
-      box-sizing: border-box;
+      border: none;
       border-radius: 20px;
       background: #ffffff;
 
       &:hover {
         background: #eaebf1;
       }
-
-      &_text {
-        width: 183px;
-        height: 24px;
-
-        font-family: 'Gilroy';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 24px;
-        text-align: center;
-        color: #413c55;
-
-        flex: none;
-        order: 0;
-        flex-grow: 0;
-      }
+      font-family: 'Gilroy';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 24px;
+      color: #413c55;
     }
   }
 
@@ -267,15 +246,12 @@
         height: 40px;
         gap: 8px;
 
-        &_num {
+        &_button {
           width: 40px;
           height: 40px;
           border-radius: 12px;
 
-          &_text {
-            width: 40px;
-            height: 40px;
-            border-radius: 12px;
+          & > span {
             font-size: 24px;
             line-height: 40px;
           }
@@ -305,7 +281,7 @@
 
     &_phone {
       width: 280px;
-      height: 478.67px;
+      height: 460px;
       top: 40px;
       background: url(../../img/phone-small.png);
       background-repeat: no-repeat;
@@ -371,13 +347,14 @@
     }
 
     &_phone {
+      height: 445px;
       margin-left: 0;
       margin-right: 0;
-      top: 20px;
+      top: -15px;
     }
 
     &_frame {
-      top: -20px;
+      top: -15px;
     }
   }
 }
