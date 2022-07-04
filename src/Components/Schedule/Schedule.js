@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Schedule.scss'
 
 function Schedule({ downloadApp }) {
+  const [selButton, setSelButton] = useState(1)
+  const buttons = [1, 2, 3, 4, 5]
+
   return (
     <div className="Schedule">
       <div className="Schedule_image">
@@ -11,28 +14,78 @@ function Schedule({ downloadApp }) {
 
       <div className="Schedule_frame">
         <div className="Schedule_frame_group">
-          <button className="Schedule_frame_group_button">
-            <span>1</span>
-          </button>
-          <button className="Schedule_frame_group_button">
-            <span>2</span>
-          </button>
-          <button className="Schedule_frame_group_button">
-            <span>3</span>
-          </button>
-          <button className="Schedule_frame_group_button">
-            <span>4</span>
-          </button>
-          <button className="Schedule_frame_group_button">
-            <span>5</span>
-          </button>
+          {buttons.map((ind) => {
+            return (
+              <button
+                key={ind}
+                onClick={() => setSelButton(ind)}
+                className={`Schedule_frame_group_button ${
+                  selButton === ind ? 'active' : ''
+                } `}
+              >
+                <span>{ind}</span>
+              </button>
+            )
+          })}
         </div>
-        <div className="Schedule_frame_text-1">Составляй план тренировок</div>
-        <div className="Schedule_frame_text-2">
-          Описание основной фичи 3-4 строки, Описание основной фичи 3-4
-          строки,Описание основной фичи 3-4 строки,Описание основной фичи 3-4
-          строки,Описание основной фичи 3-4 строки,
-        </div>
+        {selButton === 1 ? (
+          <>
+            <div className="Schedule_frame_text-1">
+              Составляй план тренировок 1
+            </div>
+            <div className="Schedule_frame_text-2">
+              Описание основной фичи 3-4 строки, Описание основной фичи 3-4
+              строки,Описание основной фичи 3-4 строки,Описание основной фичи
+              3-4 строки,Описание основной фичи 3-4 строки, ...
+            </div>
+          </>
+        ) : selButton === 2 ? (
+          <>
+            <div className="Schedule_frame_text-1">
+              Составляй план тренировок 2
+            </div>
+            <div className="Schedule_frame_text-2">
+              ...основной фичи 3-4 строки, Описание основной фичи 3-4
+              строки,Описание основной фичи 3-4 строки,Описание основной фичи
+              3-4 строки,Описание основной фичи 3-4 строки, Описание
+            </div>
+          </>
+        ) : selButton === 3 ? (
+          <>
+            <div className="Schedule_frame_text-1">
+              Составляй план тренировок 3
+            </div>
+            <div className="Schedule_frame_text-2">
+              ...фичи 3-4 строки, Описание основной фичи 3-4 строки,Описание
+              основной фичи 3-4 строки,Описание основной фичи 3-4
+              строки,Описание основной фичи 3-4 строки, Описание основной
+            </div>
+          </>
+        ) : selButton === 4 ? (
+          <>
+            <div className="Schedule_frame_text-1">
+              Составляй план тренировок 4
+            </div>
+            <div className="Schedule_frame_text-2">
+              ...3-4 строки, Описание основной фичи 3-4 строки,Описание основной
+              фичи 3-4 строки,Описание основной фичи 3-4 строки,Описание
+              основной фичи 3-4 строки, Описание основной фичи
+            </div>
+          </>
+        ) : selButton === 5 ? (
+          <>
+            <div className="Schedule_frame_text-1">
+              Составляй план тренировок 5
+            </div>
+            <div className="Schedule_frame_text-2">
+              ...Описание основной фичи 3-4 строки,Описание основной фичи 3-4
+              строки,Описание основной фичи 3-4 строки,Описание основной фичи
+              3-4 строки, Описание основной фичи 3-4 строки
+            </div>
+          </>
+        ) : (
+          <></>
+        )}
         <button onClick={downloadApp} className="Schedule_frame_button">
           Скачать приложение
         </button>
