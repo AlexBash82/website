@@ -1,9 +1,9 @@
 import React from 'react'
 import './Poster.scss'
 
-function Poster({ downloadApp }) {
+function Poster({ executeScroll, htmlElRef1 }) {
   return (
-    <div className="Poster">
+    <div ref={htmlElRef1} className="Poster">
       <div className="Poster_image"></div>
       <div className="Poster_rectangle"></div>
       <div className="Poster_logo">
@@ -20,7 +20,7 @@ function Poster({ downloadApp }) {
           Никаких ограничений
           {/* scss - (max-width: 740px) => text-2 >br {display: none} */}
         </div>
-        <button onClick={downloadApp} className="Poster_frame_button">
+        <button onClick={executeScroll} className="Poster_frame_button">
           Скачать приложение
         </button>
       </div>

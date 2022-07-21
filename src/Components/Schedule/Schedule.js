@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import './Schedule.scss'
 
-function Schedule({ downloadApp }) {
+function Schedule({ executeScroll, htmlElRef2 }) {
   const [selButton, setSelButton] = useState(1)
   const buttons = [1, 2, 3, 4, 5]
 
   return (
-    <div className="Schedule">
+    <div ref={htmlElRef2} className="Schedule">
       <div className="Schedule_image">
         <div className="Schedule_image_gradient"></div>
         <div className="Schedule_image_png"></div>
@@ -86,7 +86,7 @@ function Schedule({ downloadApp }) {
         ) : (
           <></>
         )}
-        <button onClick={downloadApp} className="Schedule_frame_button">
+        <button onClick={executeScroll} className="Schedule_frame_button">
           Скачать приложение
         </button>
       </div>

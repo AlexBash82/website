@@ -1,7 +1,7 @@
 import React from 'react'
 import './Promo.scss'
 
-function Promo() {
+function Promo({ elementToScrollRef }) {
   return (
     <div className="Promo">
       <div className="Promo_box">
@@ -52,7 +52,7 @@ function Promo() {
             </div>
           </div>
         </div>
-        <div className="Promo_box_download">
+        <div ref={elementToScrollRef} className="Promo_box_download">
           <div className="Promo_box_download_item">
             <div className="Promo_box_download_item_col-1">
               <div className="Promo_box_download_item_col-1_row-1">
